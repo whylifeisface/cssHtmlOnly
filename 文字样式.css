@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    /*纵轴居中*/
+    justify-content: center;
+    /*横轴居中*/
+    /*//视口*/
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.content .chars {
+    color: #fff;
+    /*font-size: 6vw;*/
+    font: bold 6vw italic;
+    /*font-style: italic;*/
+    /*font-weight: bold;*/
+    width: 8vw;
+    line-height: 6vh;
+    text-align: center;
+}
