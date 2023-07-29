@@ -1,26 +1,30 @@
+/**{*/
+/*    background-color: green;*/
+/*}*/
+
 .content .rect {
     width: 6vw;
-    height: 6vh;
+    height: 6vw;
     position: absolute;
-    border: 0.4vw solid;
+    border: 0.4vw solid green;
     border-radius: 0.18vw;
     margin-left: -48vw;
     opacity: 0;
 }
-.rect .a, .rect .x {
+.rect.a, .rect.x {
     border-color: #5b4489;
 }
-.rect .n, .rect .e {
+.rect.n, .rect.e {
     border-color: #aa4776;
 }
 
-.rect .i, .rect .l {
+.rect.i, .rect.l {
   border-color: #d74061;
 }
-.rect .p {
+.rect.p {
     border-color: #d74061;
 }
-.rect .a{
+.rect.a{
     animation: amove 0.6s linear forwards;
 }
 
@@ -39,8 +43,8 @@
     }
 }
 
-.rect .n{
-    animation: nmove 0.9s linear forwards;
+.rect.n{
+    animation: nmove 0.8s linear forwards;
 }
 
 @keyframes nmove {
@@ -52,14 +56,18 @@
 
         transform: translateX(calc(8vw * 0.6)) rotateY(45deg) scale(1.1, 1.1);
     }
+    85% {
+
+        transform: translateX(calc(8vw * 0.85)) rotateY(103deg) scale(1.2, 1.2);
+    }
     100% {
+
         opacity: 1;
-        transform: rotateY(360deg);
-        z-index: -1;
+        transform:translateX(calc(8vw)) rotateY(77deg) scale(1.2, 1.2);
     }
 }
 
-.rect .i{
+.rect.i{
     animation: imove 1.2s linear forwards;
 }
 
@@ -83,31 +91,29 @@
     }
 }
 
-/*.rect .p{*/
-/*    animation: pmove 1.2s linear forwards;*/
-/*}*/
+.rect.p{
+    animation: pmove 0s linear forwards;
+    animation-delay: 2.1s;
+}
 
 @keyframes pmove {
-    0% {
-        opacity: 1;
-    }
-    30% {
-        transform: translateX(calc(24vw * 0.3)) rotateY(135deg) scale(1.2, 1.2);
-    }
-    60% {
-        transform: translateX(calc(24vw * 0.6)) rotateY(45deg) scale(1.4, 1.4);
-    }
-    85% {
-        transform: translateX(calc(24vw * 0.85)) rotateY(103deg) scale(1.4, 1.4);
+    from    {
+        opacity: 0;
 
     }
-    100% {
-        transform: translateX(calc(24vw)) rotateY(75deg) scale(1.4, 1.4);
+
+    to {
+        width: 0.36vw;
+        height: 12vw;
+        position: absolute;
+        transform: translate(24vw);
+        background-color: #d74061;
         opacity: 1;
+
     }
 }
 
-.rect .l{
+.rect.l{
     animation: lmove 1.8s linear forwards;
 }
 
@@ -122,16 +128,17 @@
         transform: translateX(calc(32vw * 0.66)) rotateY(45deg) scale(1.6, 1.6);
     }
     85% {
-        transform: translateX(calc(32vw * 0.85)) rotateY(103deg) scale(1.4, 1.4);
+        transform: translateX(calc(32vw * 0.85)) rotateY(100deg) scale(1.4, 1.4);
 
     }
     100% {
-        transform: translateX(calc(32vw)) rotateY(75deg) scale(1.4, 1.4);
+        transform: translateX(calc(32vw)) rotateY(120deg) scale(1.6, 1.6);
+
         opacity: 1;
     }
 }
 
-.rect .e{
+.rect.e{
     animation: emove 2.1s linear forwards;
 }
 
@@ -150,12 +157,12 @@
 
     }
     100% {
-        transform: translateX(calc(40vw)) rotateY(103deg) scale(1.4, 1.4);
+        transform: translateX(calc(40vw)) rotateY(-103deg) scale(1.4, 1.4);
         opacity: 1;
     }
 }
 
-.rect .x{
+.rect.x{
     animation: xmove 2.1s linear forwards;
 }
 
@@ -175,7 +182,7 @@
 
     }
     100% {
-        transform: translateX(calc(48vw)) rotateY(103deg) scale(1.4, 1.4);
+        transform: translateX(calc(48vw)) rotateY(360deg) scale(1, 1);
         opacity: 1;
     }
 }

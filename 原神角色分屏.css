@@ -1,0 +1,68 @@
+.cards {
+    list-style-type: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    /*z-index: -4;*/
+}
+
+.cards .card {
+    flex: 1;
+    height: 100vh;
+    background-size: auto 100%;
+    background-position: 28% center;
+    background-repeat: no-repeat;
+    border-left: 0.5vw solid #000;
+    border-right: 0.5vw solid #000;
+
+}
+
+.cards .card:first-child {
+    border-left: 0;
+}
+
+.cards .card:last-child {
+    border-right: 0;
+}
+
+.cards {
+    opacity: 0;
+    animation: show-cards 2.1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes show-cards {
+    0% {
+        width: 40vw;
+        opacity: 0;
+    }
+    100% {
+        width: 100vw;
+        opacity: 1;
+    }
+}
+
+.aniplex {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 450;
+    /*-we-p*/
+    animation: hiden-aniplex 2s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes hiden-aniplex {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
